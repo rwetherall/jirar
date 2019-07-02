@@ -1,0 +1,20 @@
+Package: jirar
+Type: Package
+Title: Connectivity to 'JIRA' Issue Tracking Software
+Version: 1.0.0
+Author: Roy Wetherall <rwetherall@gmail.com>
+Maintainer: Roy Wetherall <rwetherall@gmail.com>
+Description: Allows you to connect to 'JIRA' issue tracking software, gather data about your projects
+  and analyis the data using 'R'.
+Depends: R (>= 3.5.0)
+License: GPL-3 | file LICENSE
+URL: https://github.com/rwetherall/jirar
+BugReports: https://github.com/rwetherall/jirar/issues
+Encoding: UTF-8
+LazyData: true
+Imports:
+  httr
+Suggests: 
+    testthat
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1
