@@ -2,4 +2,6 @@
 
 export(jirar_search)
 import(httr)
+import(jsonlite)
+import(magrittr)
 import(yaml)

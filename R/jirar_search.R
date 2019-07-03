@@ -1,5 +1,7 @@
 library(httr)
 library(yaml)
+library(jsonlite)
+require(magrittr)
 
 ##
 #' @title Search for issues in JIRA
@@ -16,7 +18,14 @@ library(yaml)
 ##
 jirar_search <- function(server, user, password, jql, start_at=0, max_results=1000) {
 
-  # get the search endpont
-  config <- yaml.load_file("R/jirar_config.yaml")
+  paste(server,
+        yaml.load_file("R/jirar_config.yaml")$endpoint$search,
+        "?jql=", gsub(" ", "+", jql),
+        "&startAt=", start_at,
+        "&maxResults=", max_results,
+        sep="") %>%
+    GET(authenticate(user, password, type="basic"))%>%
+    content("text") %>%
+    fromJSON(flatten=TRUE)
 
 }

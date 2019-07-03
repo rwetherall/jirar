@@ -10,4 +10,6 @@
 #'
 #' @import httr
 #' @import yaml
+#' @import jsonlite
+#' @import magrittr
 NULL

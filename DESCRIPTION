@@ -14,7 +14,9 @@ Encoding: UTF-8
 LazyData: true
 Imports:
   httr,
-  yaml
+  yaml,
+  jsonlite,
+  magrittr
 Suggests: 
     testthat
 Roxygen: list(markdown = TRUE)
