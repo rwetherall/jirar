@@ -13,7 +13,8 @@ BugReports: https://github.com/rwetherall/jirar/issues
 Encoding: UTF-8
 LazyData: true
 Imports:
-  httr
+  httr,
+  yaml
 Suggests: 
     testthat
 Roxygen: list(markdown = TRUE)
