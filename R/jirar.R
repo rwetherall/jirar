@@ -6,7 +6,7 @@
 #'   \item \code{\link{jirar_search}} - Search for issues in JIRA
 #' }
 #' @docType package
-#' @name jira
+#' @name jirar
 #'
 #' @import httr
 #' @import yaml
